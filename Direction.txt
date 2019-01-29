@@ -1,2 +1,3 @@
 Follow the direction before working in this project
-This is a test file created to check any update in between local machine repository and git repository.
+This is a test file created to check any update in between local machine repository and git repository
+Hello world it is a test file for testing purpose.
