@@ -1,0 +1,18 @@
+# Vagrant issues in MacOS Mojave version 10.14.1
+# I have install the Vagrant version 2.2.3. Initially, it was working with the Virtual box VM where is install
+# Contas and other linux version for the test purpose. Later i again destroy those box in the vagrant environment with 
+# Vagrant command " Vagrant destroy" it done its job but later when i try ti fire up vagrant it goes the error like in below
+
+
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'base' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Box file was not detected as metadata. Adding it directly...
+==> default: Adding box 'base' (v0) for provider: virtualbox
+    default: Downloading: base
+An error occurred while downloading the remote file. The error
+message, if any, is reproduced below. Please fix this error and try
+again.
+
+Couldn't open file ....../Desktop/class/base
