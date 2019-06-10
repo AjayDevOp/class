@@ -1,0 +1,47 @@
+## Installation of Vagrant through CLI Mode:
+## Before Vagrant install Virtual Box must be install to run any VM images of OS in virtualbox
+
+    install vagrant
+
+## Configure of vagrant in Local machine
+    mkdir vagrant
+    cd vagrant
+  
+##Add default vagrant box 
+
+    vagrant box add hashicorp/precise32
+  
+##Add configuration to Vagrantfile
+
+    vim Vagrantfile
+
+##Set precise32 as default box. Set port forwarding from 5000 (localhost:5000) to 80 on the guest machine (vargant).
+
+  > Vagrant.configure("2") do |config|
+    config.vm.box = "hashicorp/precise32"
+    config.vm.network "forwarded_port", host: 5000, guest: 80
+  end
+  
+##Start vagrant machine
+
+    vagrant up
+
+##Check vargant status
+  
+    vagrant status
+  
+##Reload vargant configuration
+
+    vagrant reload
+  
+##Stop vagrant
+
+    vagrant halt
+  
+##Login to vagrant machine
+
+     vagrant ssh
+
+## Unstall Vagrant
+    rm -rf /opt/vagrant
+    rm -f /usr/bin/vagrant
