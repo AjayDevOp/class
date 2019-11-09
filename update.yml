@@ -1,0 +1,4 @@
+## CentOS 7 Update Playbook
+- name: install updates
+  yum: name=* state=latest
+  when: ansible_os_family == "RedHat
