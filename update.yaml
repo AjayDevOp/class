@@ -1,2 +1,6 @@
-sudo apt-get update
-sudo intall httpd
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
