@@ -1,8 +1,6 @@
--name: update the system
-   yum:
-     name: "*"
-     state: latest 
- - name: install epel-release
-    yum:
-      name: epel-release
-      state: latest
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
