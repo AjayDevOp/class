@@ -12,7 +12,6 @@
   tasks:
     - name: verify that site1.example.com is up
       uri:
-        url: http://localhost/
         status_code: 200
         follow_redirects: none
       vars:
@@ -21,7 +20,6 @@
 
     - name: verify that site2.example.com is up
       uri:
-        url: http://localhost/
         status_code: 200
         follow_redirects: none
       vars:
@@ -161,7 +159,7 @@
     # verify that services are back up
     - name: verify that site1.example.com is up
       uri:
-        url: http://localhost/
+        #url: http://localhost/
         status_code: 200
         follow_redirects: none
       retries: 60
@@ -169,11 +167,11 @@
       register: probe
       vars:
         http_headers:
-          Host: site1.example.com
+          #Host: site1.example.com
       until: probe.status == 200
     - name: verify that site2.example.com is up
       uri:
-        url: http://localhost/
+        #url: http://localhost/
         status_code: 200
         follow_redirects: none
       retries: 60
