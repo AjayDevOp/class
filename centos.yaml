@@ -1,10 +1,5 @@
-- name: install the latest version of Apache
-  hosts: all
-  tasks:
-  yum:
-    name: httpd
-    state: latest
-    msg: "installation  is compeleted"
+- name: Update CentOS packages
+  yum: name=* state=latest update_cache=yes
 
 
 
